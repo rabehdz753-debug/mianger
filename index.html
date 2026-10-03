@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إرسال معلومات</title>
+    <!-- استدعاء ستايل Bootstrap لمظهر احترافي -->
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .form-container { max-width: 500px; margin: 50px auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="form-container">
+        <h3 class="text-center mb-4 text-primary">أدخل معلوماتك</h3>
+        
+        <!-- استبدل your_endpoint_key بمعرف Formspree الخاص بك لاحقاً -->
+        <form action="https://formspree.io" method="POST">
+            
+            <div class="mb-3">
+                <label for="name" class="form-label">الاسم الكامل:</label>
+                <input type="text" name="الاسم" id="name" class="form-control" placeholder="أدخل اسمك هنا" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">البريد الإلكتروني أو رقم الهاتف:</label>
+                <input type="text" name="الاتصال" id="email" class="form-control" placeholder="كيف يمكننا التواصل معك؟" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="message" class="form-label">المعلومات أو الرسالة:</label>
+                <textarea name="الرسالة" id="message" rows="4" class="form-control" placeholder="اكتب معلوماتك هنا..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100 py-2 fs-5">إرسال وتنبيه المسؤول</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
